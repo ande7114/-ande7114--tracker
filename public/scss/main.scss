@@ -1,8 +1,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-  }
+}
 
-  .sidenav {
+.sidenav {
     height: 100%;
     width: 200px;
     position: fixed;
@@ -12,19 +12,19 @@ body {
     background-color: #111;
     overflow-x: hidden;
     padding-top: 20px;
-  }
+}
 
-  .sidenav h2{
+.sidenav h2{
     color:white;
     padding-left: 20px;
-  }
-  .sidenav a{
+}
+.sidenav a{
     padding: 6px 6px 6px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
-  }
+}
 
   .sidenav a:hover {
     color: #f1f1f1;
@@ -34,38 +34,37 @@ body {
     margin-left: 200px; 
   }
 
-  @media screen and (max-height:450px) {
+@media screen and (max-height:450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
+}
 
-  form {
+form {
     max-width: 500px;
     margin: 0 auto;
     border: 2px solid grey;
     padding: 2em 1em;
-  }
+}
   
-  .form-row {
+.form-row {
     display: flex;
     justify-content: flex-end;
     padding: .5em;
-  }
+}
   
-  .form-row > label {
+.form-row > label {
     width: 100px;
-  }
-  
-  .form-row > input,
-  .form-row > select {
-    padding: .5em;
-    flex-grow: 1;
-  }
-
-  .home {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    font-family: 'Montserrat', sans-serif;
     }
+.form-row > input,
+.form-row > select {
+padding: .5em;
+flex-grow: 1;
+}
+
+.home {
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+overflow: hidden;
+font-family: 'Montserrat', sans-serif;
+}
