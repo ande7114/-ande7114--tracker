@@ -54,8 +54,6 @@ function displayTask(task) {
 }
 
 
-
-
 // Create an object called 'task'
 // Populate the properties based on the provided data model
 
