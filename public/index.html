@@ -13,8 +13,16 @@
 </head>
 
 <body>
+  <!-- Navigation Bar-->
+  <div class="sidenav">
+    <h2> TRACKLY</h2>
+    <a href="#">Home</a>
+    <a href="#">Entries</a>
+    <a href="#">Map</a>
+    <a href="#">Gallery</a>
+  </div>
   <!-- Calendar-->
-  
+
   <!-- <div class="wrapper">
     <header>
       <p class="current-date"></p>
@@ -48,7 +56,7 @@
         </li>
       </ul>
     </div>
-    
+
     <ul class="weekdays">
       <li>Mo</li>
       <li>Tu</li>
@@ -58,7 +66,7 @@
       <li>Sa</li>
       <li>Su</li>
     </ul>
-    
+
     <ul class="days">  
       <li>1</li>
       <li>2</li>
@@ -93,52 +101,83 @@
       <li>31</li>
     </ul>
   </div>
+  <!-- Entry form -->
+  <!-- <div class="form" >
+
+    <div class="entry-row">
+      <label for="taskName"> Name</label>
+      <input type="text" name="entryName" id="entryName" required="true" />
+    </div>
+  
+  <div class="entry-row">
+    <label for="entryType">Type</label>
+    <select id="entryType" name="entryType" required="true">
+       -->
+    <!-- </select>
+  </div> -->
+
+  <div class="container">
+    <h2> Today's Journal </h2>
+    <div class="form-row">
+      <!-- Input Name-->
+      <label for="entryName">Journal Title</label>
+      <input type="text" name="entryName" id="entryName" required="true" /><br><br>
+    </div>
+    <div class="entry-row">
+      <!-- Input Location-->
+      <label for="entryLocation">Location</label>
+      <input type="text" name="entryRate" id="entryRate" required="true" /><br><br>
+    </div>
+    <!-- Input Mood-->
+    <div class="entry-row">
+      <label for="entryMood">Mood</label>
+      <select id="entryMood" name="entryMood" required="true">
+          <option value="">Select one</option>
+            <option value="Happy">Happy</option>
+            <option value="Sad">Sad</option>
+            <option value="Angry">Angry</option>
+            <option value="Excited">Excited</option>
+            <option value="None">None</option>
+        </select><br><br>
+    </div>
+    <!-- Input Genre-->
+    <div class="entry-row">
+      <label for="entryGenre">Genre</label>
+      <input type="text" name="entryTime" id="entryTime" required="true"/><br><br>
+    </div>
+    <!-- Input Artist-->
+    <div class="entry-row">
+      <label for="entryArtist">Artist</label>
+      <input type="text" name="entryClient" id="entryClient" required="true" /><br><br>
+    </div>
+    <!-- Input Album -->
+    <div class="entry-row">
+      <label for="entryAlbum">Album</label>
+      <input type="text" name="entryClient" id="entryClient" required="true" /><br><br>
+    </div>
+    <!-- Input Songs Listened To -->
+    <div class="entry-row">
+      <label for="entrySongs">Songs Listened To</label>
+      <input type="text" name="entryClient" id="entryClient" required="true" /><br><br>
+    </div>
+    <!-- Input Description -->
+    <div class="entry-row">
+      <label for="entryDescription">Journal Description</label><br>
+      <textarea name="entryDescription" id="entryDescription" rows="4" cols="50"></textarea><br><br>
+    </div>
+    <!-- submit button-->
+    <div class="entry-row">
+      <input type="submit">
+    </div>
+  </form>
+
+  <!-- <h2>Tasks</h2>
+  <ul id="tasklist">
+  </ul> -->
+</div> 
+  </div>
   
 
-  <!-- Navigation Bar-->
-  <div class="sidenav">
-    <h2> TRACKLY</h2>
-    <a href="#">Home</a>
-    <a href="#">Entries</a>
-    <a href="#">Map</a>
-    <a href="#">Gallery</a>
-  </div>
- 
-  <!-- task form -->
-    <!-- <div class="form-row">
-            <label for="taskName">Name</label>
-            <input type="text" name="taskName" id="taskName" required="true" />
-          </div>
-          <div class="form-row">
-            <label for="taskType">Type</label>
-            <select id="taskType" name="taskType" required="true" >
-                <option value="">Select one</option>
-                  <option value="Concept Ideation">Concept Ideation</option>
-                  <option value="Wireframing">Wireframing</option>
-                  <option value="Application Coding">Application Coding</option>
-              </select>
-          </div>
-          <div class="form-row">
-            <label for="taskRate">Rate</label>
-            <input type="number" name="taskRate" id="taskRate" required="true" />
-          </div>
-          <div class="form-row">
-            <label for="taskTime">Time</label>
-            <input type="number" name="taskTime" id="taskTime" required="true" />
-          </div>
-          <div class="form-row">
-            <label for="taskClient">Client</label>
-            <input type="text" name="taskClient" id="taskClient" required="true" />
-          </div>
-          <div class="form-row">
-            <input type="submit">
-          </div>
-        </form>
-        <h2>Tasks</h2>
-        <ul id="tasklist">
-        </ul>
-      </div> --> 
 </body>
 
 </html>
-
