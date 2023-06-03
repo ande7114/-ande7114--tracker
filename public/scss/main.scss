@@ -1,7 +1,244 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+// form {
+//     max-width: 500px;
+//     margin: 0 auto;
+//     border: 2px solid red;
+//     padding: 2em 1em;
+// }
+  
+// .form-row {
+//     display: flex;
+//     justify-content: flex-end;
+//     padding: .5em;
+// }
+  
+// .form-row > label {
+//     width: 100px;
+//     }
+// .form-row > input,
+// .form-row > select {
+// padding: .5em;
+// flex-grow: 1;
+// }
+
+/* Import Google font - Poppins */
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+// Affects all HTML code
+// * {
+//   margin: 0;
+//   padding: 0;
+//   font-family: 'Poppins', sans-serif;
+// }
+// // affects body block elements
+// body {
+//     display: flex;
+//     align-items: center;
+//     padding: 0 10px;
+//     position: relative;
+//     left: 50% - 10;
+//     min-height: 100vh;
+//     background: #9B59B6;
+// }
+
+// border
+// .wrapper {
+//     max-width: 5000px;
+//     max-height: 5000px;
+//     background: #fff;
+//     border-radius: 10px;
+//     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+// }
+
+// // 
+// .wrapper header {
+//   display: flex;
+//   align-items: center;
+//   padding: 25px 30px 10px;
+//   justify-content: space-between;
+// }
+
+// header .icons {
+//   display: flex;
+// }
+
+// header .icons span {
+//   height: 38px;
+//   width: 38px;
+//   margin: 0 1px;
+//   cursor: pointer;
+//   color: #878787;
+//   text-align: center;
+//   line-height: 38px;
+//   font-size: 1.9rem;
+//   user-select: none;
+//   border-radius: 50%;
+// }
+
+// .icons span:last-child {
+//   margin-right: -10px;
+// }
+
+// header .icons span:hover {
+//   background: #f2f2f2;
+// }
+
+// header .current-date {
+//   font-size: 1.45rem;
+//   font-weight: 500;
+// }
+
+// .calendar {
+//   padding: 20px;
+// }
+
+// .calendar ul {
+//   display: flex;
+//   flex-wrap: wrap;
+//   list-style: none;
+//   text-align: center;
+// }
+
+// .calendar .days {
+//   margin-bottom: 20px;
+// }
+
+// .calendar li {
+//   color: #333;
+//   width: calc(100% / 7);
+//   font-size: 1.07rem;
+// }
+
+// .calendar .weeks li {
+//   font-weight: 500;
+//   cursor: default;
+// }
+
+// // Adjusts margin around each day and changes cursor when hovering over 
+// .calendar .days li {
+//   z-index: 1;
+//   cursor: pointer;
+//   position: relative;
+//   margin-top: 100px;
+// }
+
+// // greys out days from previous week
+// .days li.inactive {
+//   color: #aaa;
+// }
+
+// // Changes color of current day
+// .days li.active {
+//   color: #fff;
+// }
+
+// // Creates purple circle on current day
+// .days li::before {
+//   position: absolute;
+//   content: "";
+//   left: 50%;
+//   top: 50%;
+//   height: 40px;
+//   width: 40px;
+//   z-index: -1;
+//   border-radius: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+// .days li.active::before {
+//   background: #9B59B6;
+// }
+
+// .days li:not(.active):hover::before {
+//   background: #f2f2f2;
+// }
+
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.calendar {
+    margin-left: 200px;
+
+}
+.month {
+  padding: 70opx 75px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
 }
 
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+
+// Side Navigation border and bg color
 .sidenav {
     height: 100%;
     width: 200px;
@@ -14,10 +251,12 @@ body {
     padding-top: 20px;
 }
 
+// side nav text
 .sidenav h2{
     color:white;
     padding-left: 20px;
 }
+// 
 .sidenav a{
     padding: 6px 6px 6px 32px;
     text-decoration: none;
@@ -30,41 +269,11 @@ body {
     color: #f1f1f1;
   }
 
-  .main {
-    margin-left: 200px; 
-  }
+.main {
+margin-left: 200px; 
+}
 
 @media screen and (max-height:450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-}
-
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    border: 2px solid grey;
-    padding: 2em 1em;
-}
-  
-.form-row {
-    display: flex;
-    justify-content: flex-end;
-    padding: .5em;
-}
-  
-.form-row > label {
-    width: 100px;
-    }
-.form-row > input,
-.form-row > select {
-padding: .5em;
-flex-grow: 1;
-}
-
-.home {
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-overflow: hidden;
-font-family: 'Montserrat', sans-serif;
 }
