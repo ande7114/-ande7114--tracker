@@ -13,7 +13,8 @@
 </head>
 
 <body>
-  <!-- Navigation Bar-->
+  <header>
+      <!-- Navigation Bar-->
   <div class="sidenav">
     <h2> TRACKLY</h2>
     <a href="#">Home</a>
@@ -21,112 +22,81 @@
     <a href="#">Map</a>
     <a href="#">Gallery</a>
   </div>
-  <!-- Calendar-->
-
-  <!-- <div class="wrapper">
-    <header>
-      <p class="current-date"></p>
-      <div class="icons">
-        <span id="prev" class="material-symbols-rounded">chevron_left</span>
-        <span id="next" class="material-symbols-rounded">chevron_right</span>
+  </header>
+  <main>
+    <section> 
+    <!-- Calendar-->
+    <div class="calendar"> 
+      <div class="month">      
+        <ul>
+          <li class="prev">&#10094;</li>
+          <li class="next">&#10095;</li>
+          <li>
+            August<br>
+            <span style="font-size:18px">2021</span>
+          </li>
+        </ul>
       </div>
-    </header>
-    <div class="calendar">
-      <ul class="weeks">
-        <li>Sun</li>
-        <li>Mon</li>
-        <li>Tue</li>
-        <li>Wed</li>
-        <li>Thu</li>
-        <li>Fri</li>
-        <li>Sat</li>
-      </ul>
-      <ul class="days"></ul>
-    </div>
-  </div> -->
-
-  <div class="calendar"> 
-    <div class="month">      
-      <ul>
-        <li class="prev">&#10094;</li>
-        <li class="next">&#10095;</li>
-        <li>
-          August<br>
-          <span style="font-size:18px">2021</span>
-        </li>
-      </ul>
-    </div>
-
-    <ul class="weekdays">
-      <li>Mo</li>
-      <li>Tu</li>
-      <li>We</li>
-      <li>Th</li>
-      <li>Fr</li>
-      <li>Sa</li>
-      <li>Su</li>
-    </ul>
-
-    <ul class="days">  
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li><span class="active">10</span></li>
-      <li>11</li>
-      <li>12</li>
-      <li>13</li>
-      <li>14</li>
-      <li>15</li>
-      <li>16</li>
-      <li>17</li>
-      <li>18</li>
-      <li>19</li>
-      <li>20</li>
-      <li>21</li>
-      <li>22</li>
-      <li>23</li>
-      <li>24</li>
-      <li>25</li>
-      <li>26</li>
-      <li>27</li>
-      <li>28</li>
-      <li>29</li>
-      <li>30</li>
-      <li>31</li>
-    </ul>
-  </div>
-  <!-- Entry form -->
-  <!-- <div class="form" >
-
-    <div class="entry-row">
-      <label for="taskName"> Name</label>
-      <input type="text" name="entryName" id="entryName" required="true" />
-    </div>
   
-  <div class="entry-row">
-    <label for="entryType">Type</label>
-    <select id="entryType" name="entryType" required="true">
-       -->
-    <!-- </select>
-  </div> -->
-
+      <ul class="weekdays">
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+      </ul>
+  
+      <ul class="days">  
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li><span class="active">10</span></li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+      </ul>
+    </div>
+    </section>
+  <section> 
+  <!-- Entry form -->
+  <form>
   <div class="container">
     <h2> Today's Journal </h2>
     <div class="form-row">
       <!-- Input Name-->
-      <label for="entryName">Journal Title</label>
-      <input type="text" name="entryName" id="entryName" required="true" /><br><br>
+      <label for="entryTitle">Journal Title</label>
+      <input type="text" name="entryTitle" id="entryTitle" required="true" /><br><br>
     </div>
     <div class="entry-row">
       <!-- Input Location-->
-      <label for="entryLocation">Location</label>
-      <input type="text" name="entryRate" id="entryRate" required="true" /><br><br>
+      <label for="entryLoc">Location</label>
+      <input type="text" name="entryLoc" id="entryLoc" required="true" /><br><br>
     </div>
     <!-- Input Mood-->
     <div class="entry-row">
@@ -143,22 +113,22 @@
     <!-- Input Genre-->
     <div class="entry-row">
       <label for="entryGenre">Genre</label>
-      <input type="text" name="entryTime" id="entryTime" required="true"/><br><br>
+      <input type="text" name="entryGenre" id="entryGenre" required="true"/><br><br>
     </div>
     <!-- Input Artist-->
     <div class="entry-row">
       <label for="entryArtist">Artist</label>
-      <input type="text" name="entryClient" id="entryClient" required="true" /><br><br>
+      <input type="text" name="entryArtist" id="entryArtist" required="true" /><br><br>
     </div>
     <!-- Input Album -->
     <div class="entry-row">
       <label for="entryAlbum">Album</label>
-      <input type="text" name="entryClient" id="entryClient" required="true" /><br><br>
+      <input type="text" name="entryAlbum" id="entryAlbum" required="true" /><br><br>
     </div>
     <!-- Input Songs Listened To -->
     <div class="entry-row">
       <label for="entrySongs">Songs Listened To</label>
-      <input type="text" name="entryClient" id="entryClient" required="true" /><br><br>
+      <input type="text" name="entrySongs" id="entrySongs" required="true" /><br><br>
     </div>
     <!-- Input Description -->
     <div class="entry-row">
@@ -170,14 +140,10 @@
       <input type="submit">
     </div>
   </form>
-
-  <!-- <h2>Tasks</h2>
-  <ul id="tasklist">
-  </ul> -->
-</div> 
-  </div>
-  
-
+  </section>
+  <aside>
+    <ul id="entrylist"></ul>
+  </aside>
+</main>
 </body>
-
 </html>
