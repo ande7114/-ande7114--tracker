@@ -114,14 +114,14 @@ margin-left: 200px;
 .entry-row > label {
     width: 100px;
     }
-.form-row > input,
-.form-row > select {
+.entry-row > input,
+.entry-row > select {
 padding: .5em;
 flex-grow: 1;
 }
 
 aside {
-    grid-area: tasklist;
+    grid-area: entrylist;
     padding: 1em;
     overflow-y: scroll;
   }

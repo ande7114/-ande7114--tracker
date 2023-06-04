@@ -1,115 +1,3 @@
-// const daysTag = document.querySelector(".days"),
-//   currentDate = document.querySelector(".current-date"),
-//   prevNextIcon = document.querySelectorAll(".icons span");
-
-// // getting new date, current year and month
-// let date = new Date(),
-//   currYear = date.getFullYear(),
-//   currMonth = date.getMonth();
-
-// // storing full name of all months in array
-// const months = ["January", "February", "March", "April", "May", "June", "July",
-//   "August", "September", "October", "November", "December"];
-
-// const renderCalendar = () => {
-//   let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
-//     lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
-//     lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
-//     lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
-//   let liTag = "";
-
-//   for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
-//     liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
-//   }
-
-//   for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
-//     // adding active class to li if the current day, month, and year matched
-//     let isToday = i === date.getDate() && currMonth === new Date().getMonth()
-//       && currYear === new Date().getFullYear() ? "active" : "";
-//     liTag += `<li class="${isToday}">${i}</li>`;
-//   }
-
-//   for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
-//     liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
-//   }
-//   currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
-//   daysTag.innerHTML = liTag;
-// }
-// renderCalendar();
-
-// prevNextIcon.forEach(icon => { // getting prev and next icons
-//   icon.addEventListener("click", () => { // adding click event on both icons
-//     // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
-//     currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
-
-//     if (currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
-//       // creating a new date of current year & month and pass it as date value
-//       date = new Date(currYear, currMonth, new Date().getDate());
-//       currYear = date.getFullYear(); // updating current year with new date year
-//       currMonth = date.getMonth(); // updating current month with new date month
-//     } else {
-//       date = new Date(); // pass the current date as date value
-//     }
-//     renderCalendar(); // calling renderCalendar function
-//   });
-// });
-
-// const daysTag = document.querySelector(".days"),
-//   currentDate = document.querySelector(".current-date"),
-//   prevNextIcon = document.querySelectorAll(".icons span");
-
-// // getting new date, current year and month
-// let date = new Date(),
-//   currYear = date.getFullYear(),
-//   currMonth = date.getMonth();
-
-// // storing full name of all months in array
-// const months = ["January", "February", "March", "April", "May", "June", "July",
-//   "August", "September", "October", "November", "December"];
-
-// const renderCalendar = () => {
-//   let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
-//     lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
-//     lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
-//     lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
-//   let liTag = "";
-
-//   for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
-//     liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
-//   }
-
-//   for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
-//     // adding active class to li if the current day, month, and year matched
-//     let isToday = i === date.getDate() && currMonth === new Date().getMonth()
-//       && currYear === new Date().getFullYear() ? "active" : "";
-//     liTag += `<li class="${isToday}">${i}</li>`;
-//   }
-
-//   for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
-//     liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
-//   }
-//   currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
-//   daysTag.innerHTML = liTag;
-// }
-// renderCalendar();
-
-// prevNextIcon.forEach(icon => { // getting prev and next icons
-//   icon.addEventListener("click", () => { // adding click event on both icons
-//     // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
-//     currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
-
-//     if (currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
-//       // creating a new date of current year & month and pass it as date value
-//       date = new Date(currYear, currMonth, new Date().getDate());
-//       currYear = date.getFullYear(); // updating current year with new date year
-//       currMonth = date.getMonth(); // updating current month with new date month
-//     } else {
-//       date = new Date(); // pass the current date as date value
-//     }
-//     renderCalendar(); // calling renderCalendar function
-//   });
-// });
-
 // set up variables for HTML elements 
 const entry = document.getElementById("journalEntry");
 const entrylist = document.getElementById("entrylist");
@@ -118,61 +6,63 @@ var entryList = [];
 
 // Pushes objects into entryList array
 function addEntry(title, loc, mood, genre, artist, album, songs, desc) {
-  let journal = {
-    title,
-    loc,
-    mood,
-    genre,
-    artist,
-    album,
-    songs,
-    desc
-  }
-  entryList.push(journal);
-  console.log(entryList);
-  displayEntry(journal);
+    let journal = {
+        title,
+        loc,
+        mood,
+        genre,
+        artist,
+        album,
+        songs,
+        desc,
+        id: Date.now(),
+        date: new Date().toISOString(),
+    }
+
+    entryList.push(journal);
+    displayEntry(journal);
 }
 
 // Listen for when the submit button is clicked
 entry.addEventListener("submit", function(event) {
-
-  console.log(entry.elements, 'form elements')
-  // console.log(event.srcElement, 'entry');
-  event.preventDefault(); // Prevents form from auto-submitting
-  // var title = document.getElementById('title').value
+    console.log(entry.elements, 'form elements')
+    // console.log(event.srcElement, 'entry');
+    event.preventDefault(); // Prevents form from auto-submitting
+    // var title = document.getElementById('title').value
     // console.log(title);
-  addEntry(
-    entry.elements.entryTitle.value,
-    entry.elements.entryLoc.value,
-    entry.elements.entryMood.value,
-    entry.elements.entryGenre.value,
-    entry.elements.entryArtist.value,
-    entry.elements.entryAlbum.value,
-    entry.elements.entrySongs.value,
-    entry.elements.entryDescription.value,
-  )
+    addEntry(
+        entry.elements.entryTitle.value,
+        entry.elements.entryLoc.value,
+        entry.elements.entryMood.value,
+        entry.elements.entryGenre.value,
+        entry.elements.entryArtist.value,
+        entry.elements.entryAlbum.value,
+        entry.elements.entrySongs.value,
+        entry.elements.entryDescription.value,
+    )
 })
 
-// display the entries
+// display the journal entry
 function displayEntry(journal) {
-  let item = document.createElement("li");
-  item.setAttribute("data-id", journal.id);
-  item.innerHTML = 
-    `<p><strong>${entry.name}</strong><br>
-    <strong>${entry.loc}</strong><br>
-    <strong>${entry.mood}</strong><br>
-    <strong>${entry.genre}</strong><br>
-    <strong>${entry.artist}</strong><br>
-    <strong>${entry.album}</strong><br>
-    <strong>${entry.songs}</strong><br>
-    <strong>${entry.desc}</strong><br>
-    `;
-}
-
+    let item = document.createElement("li");
+    item.setAttribute("data-id", journal.id);
+    item.innerHTML =
+      `<p><strong>${journal.name}</strong></p>
+      <p><strong>${journal.loc}</strong></p>
+      <p><strong>${journal.mood}</strong></p>
+      <p><strong>${journal.genre}</strong></p>
+      <p><strong>${journal.artist}</strong></p>
+      <p><strong>${journal.album}</strong></p>
+      <p><strong>${journal.songs}</strong></p>
+      <p><strong>${journal.desc}</strong></p>
+      `;
+  }
 entrylist.appendChild(item);
 
-// Clear the value of the input once the ask has been added to the page
+// Clear the value of the input once the entry has been added to the page
 entry.reset();
+console.log(entry.reset(), "boo");
+console.log("test");
 
 // set up delete button 
 let delButton = document.createElement("button");
@@ -182,11 +72,11 @@ item.appendChild(delButton);
 
 // Listen for when the delete button is clicked
 delButton.addEventListener("click", function(event) {
-  entryList.forEach(function(EntryArrayElement,EntryArrayIndex) {
-    if(entryArrayElement.id == item.getAttribute('data-id')) {
-      entryList.splice(entryArrayIndex, 1)
-    }
-  })
-  console.log(entryList)
-  item.remove(); // Removes the entry
+    entryList.forEach(function(EntryArrayElement, EntryArrayIndex) {
+        if (entryArrayElement.id == item.getAttribute('data-id')) {
+            entryList.splice(entryArrayIndex, 1)
+        }
+    })
+    console.log(entryList)
+    item.remove(); // Removes the entry
 })
