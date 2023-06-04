@@ -1,149 +1,143 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <title> Trackly | Web Design Prototype</title>
-  <link rel="stylesheet" href="scss/main.scss">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Link for Icons -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-  <script src="script.js" defer></script>
-</head>
-
-<body>
-  <header>
-      <!-- Navigation Bar-->
-  <div class="sidenav">
-    <h2> TRACKLY</h2>
-    <a href="#">Home</a>
-    <a href="#">Entries</a>
-    <a href="#">Map</a>
-    <a href="#">Gallery</a>
-  </div>
-  </header>
-  <main>
-    <section> 
-    <!-- Calendar-->
-    <div class="calendar"> 
-      <div class="month">      
-        <ul>
-          <li class="prev">&#10094;</li>
-          <li class="next">&#10095;</li>
-          <li>
-            August<br>
-            <span style="font-size:18px">2021</span>
-          </li>
-        </ul>
-      </div>
-  
-      <ul class="weekdays">
-        <li>Mo</li>
-        <li>Tu</li>
-        <li>We</li>
-        <li>Th</li>
-        <li>Fr</li>
-        <li>Sa</li>
-        <li>Su</li>
-      </ul>
-  
-      <ul class="days">  
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-        <li>9</li>
-        <li><span class="active">10</span></li>
-        <li>11</li>
-        <li>12</li>
-        <li>13</li>
-        <li>14</li>
-        <li>15</li>
-        <li>16</li>
-        <li>17</li>
-        <li>18</li>
-        <li>19</li>
-        <li>20</li>
-        <li>21</li>
-        <li>22</li>
-        <li>23</li>
-        <li>24</li>
-        <li>25</li>
-        <li>26</li>
-        <li>27</li>
-        <li>28</li>
-        <li>29</li>
-        <li>30</li>
-        <li>31</li>
-      </ul>
-    </div>
-    </section>
-  <section> 
-  <!-- Entry form -->
-  <form>
-  <div class="container">
-    <h2> Today's Journal </h2>
-    <div class="form-row">
-      <!-- Input Name-->
-      <label for="entryTitle">Journal Title</label>
-      <input type="text" name="entryTitle" id="entryTitle" required="true" /><br><br>
-    </div>
-    <div class="entry-row">
-      <!-- Input Location-->
-      <label for="entryLoc">Location</label>
-      <input type="text" name="entryLoc" id="entryLoc" required="true" /><br><br>
-    </div>
-    <!-- Input Mood-->
-    <div class="entry-row">
-      <label for="entryMood">Mood</label>
-      <select id="entryMood" name="entryMood" required="true">
-          <option value="">Select one</option>
-            <option value="Happy">Happy</option>
-            <option value="Sad">Sad</option>
-            <option value="Angry">Angry</option>
-            <option value="Excited">Excited</option>
-            <option value="None">None</option>
-        </select><br><br>
-    </div>
-    <!-- Input Genre-->
-    <div class="entry-row">
-      <label for="entryGenre">Genre</label>
-      <input type="text" name="entryGenre" id="entryGenre" required="true"/><br><br>
-    </div>
-    <!-- Input Artist-->
-    <div class="entry-row">
-      <label for="entryArtist">Artist</label>
-      <input type="text" name="entryArtist" id="entryArtist" required="true" /><br><br>
-    </div>
-    <!-- Input Album -->
-    <div class="entry-row">
-      <label for="entryAlbum">Album</label>
-      <input type="text" name="entryAlbum" id="entryAlbum" required="true" /><br><br>
-    </div>
-    <!-- Input Songs Listened To -->
-    <div class="entry-row">
-      <label for="entrySongs">Songs Listened To</label>
-      <input type="text" name="entrySongs" id="entrySongs" required="true" /><br><br>
-    </div>
-    <!-- Input Description -->
-    <div class="entry-row">
-      <label for="entryDescription">Journal Description</label><br>
-      <textarea name="entryDescription" id="entryDescription" rows="4" cols="50"></textarea><br><br>
-    </div>
-    <!-- submit button-->
-    <div class="entry-row">
-      <input type="submit">
-    </div>
-  </form>
-  </section>
-  <aside>
-    <ul id="entrylist"></ul>
-  </aside>
-</main>
-</body>
+    <head>
+      <meta charset="utf-8">
+      <title> Trackly | Web Design Prototype</title>
+      <link rel="stylesheet" href="scss/main.scss">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <header>
+         <!-- Navigation Bar-->
+         <div class="sidenav">
+            <h2> TRACKLY</h2>
+            <a href="#">Home</a>
+            <a href="#">Entries</a>
+            <a href="#">Map</a>
+            <a href="#">Gallery</a>
+         </div>
+      </header>
+      <main>
+         <section>
+            <!-- Calendar-->
+            <div class="calendar">
+               <div class="month">
+                  <ul>
+                     <li class="prev">&#10094;</li>
+                     <li class="next">&#10095;</li>
+                     <li>
+                        August<br>
+                        <span style="font-size:18px">2021</span>
+                     </li>
+                  </ul>
+               </div>
+               <ul class="weekdays">
+                  <li>Mo</li>
+                  <li>Tu</li>
+                  <li>We</li>
+                  <li>Th</li>
+                  <li>Fr</li>
+                  <li>Sa</li>
+                  <li>Su</li>
+               </ul>
+               <ul class="days">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li><span class="active">10</span></li>
+                  <li>11</li>
+                  <li>12</li>
+                  <li>13</li>
+                  <li>14</li>
+                  <li>15</li>
+                  <li>16</li>
+                  <li>17</li>
+                  <li>18</li>
+                  <li>19</li>
+                  <li>20</li>
+                  <li>21</li>
+                  <li>22</li>
+                  <li>23</li>
+                  <li>24</li>
+                  <li>25</li>
+                  <li>26</li>
+                  <li>27</li>
+                  <li>28</li>
+                  <li>29</li>
+                  <li>30</li>
+                  <li>31</li>
+               </ul>
+            </div>
+         </section>
+         <section>
+            <!-- Entry form -->
+            <form id ="journalEntry">
+              <h2> Today's Journal </h2>
+              <div class="entry-row">
+                <!-- Input Name-->
+                <label for="entryTitle">Journal Title</label>
+                <input type="text" name="entryTitle" id="entryTitle" required="true" /><br><br>
+              </div>
+              <div class="entry-row">
+                <!-- Input Location-->
+                <label for="entryLoc">Location</label>
+                <input type="text" name="entryLoc" id="entryLoc" required="true" /><br><br>
+              </div>
+              <!-- Input Mood-->
+              <div class="entry-row">
+                <label for="entryMood">Mood</label>
+                <select id="entryMood" name="entryMood" required="true">
+                    <option value="">Select one</option>
+                    <option value="Happy">Happy</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Angry">Angry</option>
+                    <option value="Excited">Excited</option>
+                    <option value="None">None</option>
+                </select>
+                <br><br>
+              </div>
+              <!-- Input Genre-->
+              <div class="entry-row">
+                <label class="entry-row" for="entryGenre">Genre</label>
+                <input type="text" name="entryGenre" id="entryGenre" required="true"/><br><br>
+              </div>
+              <!-- Input Artist-->
+              <div class="entry-row">
+                <label for="entryArtist">Artist</label>
+                <input type="text" name="entryArtist" id="entryArtist" required="true" /><br><br>
+              </div>
+              <!-- Input Album -->
+              <div class="entry-row">
+                <label for="entryAlbum">Album</label>
+                <input type="text" name="entryAlbum" id="entryAlbum" required="true" /><br><br>
+              </div>
+              <!-- Input Songs Listened To -->
+              <div class="entry-row">
+                <label for="entrySongs">Songs Listened To</label>
+                <input type="text" name="entrySongs" id="entrySongs" required="true" /><br><br>
+              </div>
+              <!-- Input Description -->
+              <div class="entry-row">
+                <label for="entryDescription">Journal Description</label><br>
+                <textarea name="entryDescription" id="entryDescription" rows="4" cols="50"></textarea><br><br>
+              </div>
+              <!-- submit button-->
+              <div class="entry-row">
+                <input type="submit">
+              </div>
+            </form>
+         </section>
+         <!-- Journal entry details-->
+         <aside>
+            <ul id="entrylist"></ul>
+         </aside>
+      </main>
+      <script src="script.js" defer></script>
+   </body>
 </html>

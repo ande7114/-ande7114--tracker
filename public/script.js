@@ -111,14 +111,14 @@
 // });
 
 // set up variables for HTML elements 
-const entry = document.getElementById("entryform");
+const entry = document.getElementById("journalEntry");
 const entrylist = document.getElementById("entrylist");
 
 var entryList = [];
 
-// Logs entry 
+// Pushes objects into entryList array
 function addEntry(title, loc, mood, genre, artist, album, songs, desc) {
-  let entry = {
+  let journal = {
     title,
     loc,
     mood,
@@ -126,33 +126,37 @@ function addEntry(title, loc, mood, genre, artist, album, songs, desc) {
     artist,
     album,
     songs,
-    desc,
+    desc
   }
-  entryList.push(entry);
-  console.log(entryList, 'entryList');
-  displayEntry(entry);
+  entryList.push(journal);
+  console.log(entryList);
+  displayEntry(journal);
 }
 
 // Listen for when the submit button is clicked
 entry.addEventListener("submit", function(event) {
-  console.log('click');
-  event.preventDefault();
+
+  console.log(entry.elements, 'form elements')
+  // console.log(event.srcElement, 'entry');
+  event.preventDefault(); // Prevents form from auto-submitting
+  // var title = document.getElementById('title').value
+    // console.log(title);
   addEntry(
-    entry.elements.entryName.value,
+    entry.elements.entryTitle.value,
     entry.elements.entryLoc.value,
     entry.elements.entryMood.value,
     entry.elements.entryGenre.value,
     entry.elements.entryArtist.value,
     entry.elements.entryAlbum.value,
     entry.elements.entrySongs.value,
-    entry.elements.entryDesc.value,
+    entry.elements.entryDescription.value,
   )
 })
 
 // display the entries
-function displayEntry(entry) {
+function displayEntry(journal) {
   let item = document.createElement("li");
-  item.setAttribute("data-id", entry.id);
+  item.setAttribute("data-id", journal.id);
   item.innerHTML = 
     `<p><strong>${entry.name}</strong><br>
     <strong>${entry.loc}</strong><br>
